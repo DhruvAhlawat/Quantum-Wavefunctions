@@ -93,7 +93,10 @@ def f(x):
         return 1;
     return sin(x)/x;
 def g(x):
-    return x**2;
+    if(x < 5):
+        return sin(x);
+    else:
+        return 0;
 a = 10;
 obj1 = ConvertToFourierSeries(a,f,70,2000); #create an object like this
 obj2 = ConvertToFourierSeries(a,g,70,2000);
