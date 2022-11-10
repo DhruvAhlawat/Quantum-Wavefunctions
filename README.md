@@ -1,4 +1,6 @@
 # Quantum-Wavefunctions
 Modeled the time evolution of Quantum wavefunctions using custom integrator with riemann sums and solving for fourier coeffecients for any initial wavefunction inside a 1D box. Using Matplotlib for graphing the outputs. all the functions are inside a class and hence any number of plots can be made by just instantiating different objects of the class. *Animations and Wavefunction file to be added*
-![image](https://user-images.githubusercontent.com/96519848/201157861-86909120-2ebc-4995-a165-3919fd7a6ad3.png | width = 100)
-![image](https://user-images.githubusercontent.com/96519848/201160016-a557f71c-d9dc-4fb6-a33a-3a7308d71aee.png | width = 100)
+![image](https://user-images.githubusercontent.com/96519848/201157861-86909120-2ebc-4995-a165-3919fd7a6ad3.png)
+![image](https://user-images.githubusercontent.com/96519848/201160016-a557f71c-d9dc-4fb6-a33a-3a7308d71aee.png)
+
+I got interested in making this because of a question I found while studying for my quantum mechanics course PYL100 at IITD. The question was pretty straightforward and just asked what would happen to a particle when initially it was in a 1D box of length = 'a' in the ground state, and then the size of the box suddenly changes to size '4a'. We had to then find the probability of it being in a particular stationary state of the new box on measurement. The question itself is easy if you know how to write a wavefunction in a sum of solutions of the '4a' box. But I was interested in how the wavefunction itself would evolve with time in this type of arrangement, and hence I made an animation of it on desmos
