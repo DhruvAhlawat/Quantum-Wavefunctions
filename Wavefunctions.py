@@ -5,8 +5,9 @@ from matplotlib.animation import FuncAnimation;
 import matplotlib.animation as animationFunctions;
 
 
-#if saving is needed then use Cntrl+F to search for "anim.save" and
-
+#if saving is needed then write location here.
+saveLocation = r"D:\OneDrive - IIT Delhi\Pictures\_PythonProjects\Wavefunctions\Animations of Wavefunction\CentredAt1at32_35.gif";
+        # set the above save location correctly otherwise animation might not work
 
 
 class MyQuantumBox:
@@ -165,8 +166,7 @@ class MyQuantumBox:
         originalFunction, = ax.plot(self.xPoints,self.originalYval,'b--', label="Psi at T=0");
         ax.legend();
         anim = FuncAnimation(fig,animate, interval = self.timeDelay*1000, frames=len(self.t)-1);
-        saveLocation = r"D:\OneDrive - IIT Delhi\Pictures\_PythonProjects\Wavefunctions\Animations of Wavefunction\anim50.gif";
-        # set the above save location correctly
+        
         #for some reason, the r must be placed in front of the path
 
         Writer = animationFunctions.FFMpegWriter(fps=30);
@@ -175,22 +175,27 @@ class MyQuantumBox:
         plt.show();
 
         
-
-
 a = 4;
 def f(x):
-    if(1.98 <= x <= 2.02):
-        return 1;
-    if(x == 0):
-        return 1;
-    else:
-        return 0;
-def CentredAt2(x):
-    a = 1.85; b = 2.15;
+    a = 0; b = 1;
     if(a <= x <= b):
-        return sin((x-a)*pi/(b-a));
+        return sqrt(2/(b-a))*sin((x-a)*pi/(b-a));
     else:
         return 0;
-box1 = MyQuantumBox(a,CentredAt2,50,25);
+def CentredAt1(x):
+    a = 0.85; b = 1.15;
+    if(a <= x <= b):
+        return sqrt(2/(b-a))*sin((x-a)*pi/(b-a));
+    else:
+        return 0;
+def equalEverywhere(x):
+    return 1/a;
+def sinc(x):
+    start = 0; end = a;
+    if(start < x <= end):
+        return sin(pi*x)/x;
+    else:
+        return 0;
+box1 = MyQuantumBox(a,CentredAt1,40,32,400,10000);
 #box1.initialise(CentredAt2,20);
 box1.DisplayAnimation();
