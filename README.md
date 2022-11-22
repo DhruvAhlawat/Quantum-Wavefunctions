@@ -23,5 +23,5 @@ So I wanted to then make a program that can show the time evolution of any initi
 ![ais10](https://github.com/DhruvAhlawat/Quantum-Wavefunctions/blob/main/ais10AndCenteredAt5.gif)
 **similar to the first wavefunction, but with a larger length of the box**
 
-![ais10Assymetric](https://github.com/DhruvAhlawat/Quantum-Wavefunctions/blob/main/ais10AndCenteredAt5.gif)
+![ais10Assymetric](https://github.com/DhruvAhlawat/Quantum-Wavefunctions/blob/main/ais10AndCenteredAt25.gif)
 **similar to the wavefunction described just above, but initial position is not in the center**
