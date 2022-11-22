@@ -16,7 +16,7 @@ Here is the animation of the above question.
 The question itself is easy if you know how to write a wavefunction in a sum of stationary solutions of the '4a' box. But I was interested in how the wavefunction itself would evolve with time in this type of arrangement, and hence I made an animation of it on desmos which you can play here https://www.desmos.com/calculator/rg8yslb1ho
 So I wanted to then make a program that can show the time evolution of any initial wavefunction inside a box (and maybe even in other potential systems later)
 
-**Some Other Animations**
+**# Some Other Animations** {style=text-align=center}
 ![equalEverywhere4](https://user-images.githubusercontent.com/96519848/203326853-de3455e7-1aa1-4df0-9321-113dd8ecd3ef.gif)
-**Here Initial wavefunction is equal everywhere**
+                             **Here Initial wavefunction is equal everywhere. Also, a lot of Noise persists since the series isn't upto infinity**
 
