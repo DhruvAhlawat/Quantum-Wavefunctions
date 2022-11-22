@@ -20,3 +20,5 @@ So I wanted to then make a program that can show the time evolution of any initi
 ![equalEverywhere4](https://user-images.githubusercontent.com/96519848/203326853-de3455e7-1aa1-4df0-9321-113dd8ecd3ef.gif)
                              **Here Initial wavefunction is equal everywhere. Also, a lot of Noise persists since the series isn't upto infinity**
 
+![assymetricStart](https://github.com/DhruvAhlawat/Quantum-Wavefunctions/blob/main/CentredAt1at32_50DashDottedOrange.gif)
+**similar to the wavefunction described first, but initial position is not in the center**
