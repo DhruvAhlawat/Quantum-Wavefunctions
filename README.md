@@ -28,3 +28,5 @@ So I wanted to then make a program that can show the time evolution of any initi
 
 ![StationaryState3atais10Faster](https://user-images.githubusercontent.com/96519848/203481807-99e69b0a-0f79-42f1-9458-5a60114e5482.gif)
 **in a stationary state of the box, the |psi| and |psi|^2 remain the same at all times, while the real and imaginary parts look like they are rotating across the axis of the box.**
+![Normalizedsinxx](https://user-images.githubusercontent.com/96519848/203487073-52ef0f60-8989-4e13-a6df-065e0e02725e.gif)
+**initial function is normalized version of** $sin(pi*x/2)*x$ 
