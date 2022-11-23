@@ -25,3 +25,6 @@ So I wanted to then make a program that can show the time evolution of any initi
 
 ![ais10Assymetric](https://github.com/DhruvAhlawat/Quantum-Wavefunctions/blob/main/ais10AndCenteredAt25.gif)
 **similar to the wavefunction described just above, but initial position is not in the center**
+
+![StationaryState3atais10Faster](https://user-images.githubusercontent.com/96519848/203481807-99e69b0a-0f79-42f1-9458-5a60114e5482.gif)
+**in a stationary state of the box, the |psi| and |psi|^2 remain the same at all times, while the real and imaginary parts look like they are rotating across the axis of the box.**
