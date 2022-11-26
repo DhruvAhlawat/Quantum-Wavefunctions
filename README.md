@@ -32,6 +32,6 @@ So I wanted to then make a program that can show the time evolution of any initi
 
 ![equalEverywhere4](https://user-images.githubusercontent.com/96519848/203326853-de3455e7-1aa1-4df0-9321-113dd8ecd3ef.gif)
                              **Here Initial wavefunction is equal everywhere. Also, a lot of Noise persists here, it is because initial wavefunction was defined to be 1 at boundary as well**
-![funcgif](https://user-images.githubusercontent.com/96519848/204089433-3983e1a3-9127-4938-9124-91b10d492b60.gif)
+![funcgif](https://user-images.githubusercontent.com/96519848/204090471-8e968d87-01e1-4779-a876-f594ad012ceb.gif)
 **similar to above, but the initial wavefunction rises sinusoidally from the left then attains a constant value and then decreases sinusoidally to the right endpoint.
 compared to the above animation, there is almost no noise here.**
