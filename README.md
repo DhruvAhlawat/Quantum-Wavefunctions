@@ -17,8 +17,7 @@ The question itself is easy if you know how to write a wavefunction in a sum of 
 So I wanted to then make a program that can show the time evolution of any initial wavefunction inside a box (and maybe even in other potential systems later)
 
 # **Some Other Animations**
-![equalEverywhere4](https://user-images.githubusercontent.com/96519848/203326853-de3455e7-1aa1-4df0-9321-113dd8ecd3ef.gif)
-                             **Here Initial wavefunction is equal everywhere. Also, a lot of Noise persists since the series isn't upto infinity**
+
 
 ![ais10](https://github.com/DhruvAhlawat/Quantum-Wavefunctions/blob/main/ais10AndCenteredAt5.gif)
 **similar to the first wavefunction, but with a larger length of the box**
@@ -30,3 +29,9 @@ So I wanted to then make a program that can show the time evolution of any initi
 **in a stationary state of the box, the |psi| and |psi|^2 remain the same at all times, while the real and imaginary parts look like they are rotating across the axis of the box.**
 ![Normalizedsinxx](https://user-images.githubusercontent.com/96519848/203487073-52ef0f60-8989-4e13-a6df-065e0e02725e.gif)
 **initial function is normalized version of** $sin(pi*x/2)*x$ 
+
+![equalEverywhere4](https://user-images.githubusercontent.com/96519848/203326853-de3455e7-1aa1-4df0-9321-113dd8ecd3ef.gif)
+                             **Here Initial wavefunction is equal everywhere. Also, a lot of Noise persists here, it is because initial wavefunction was defined to be 1 at boundary as well**
+![funcgif](https://user-images.githubusercontent.com/96519848/204089433-3983e1a3-9127-4938-9124-91b10d492b60.gif)
+**similar to above, but the initial wavefunction rises sinusoidally from the left then attains a constant value and then decreases sinusoidally to the right endpoint.
+compared to the above animation, there is almost no noise here.**
