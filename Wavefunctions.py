@@ -6,7 +6,8 @@ import matplotlib.animation as animationFunctions;
 
 
 #if saving is needed then write location here.
-saveLocation = r"D:\OneDrive - IIT Delhi\Pictures\_PythonProjects\Wavefunctions\Animations of Wavefunction\CentredAt1at32_35.gif";
+#Note that the r must be placed in front of the path
+saveLocation = r"D:\OneDrive - IIT Delhi\Pictures\_PythonProjects\Wavefunctions\Animations of Wavefunction\funcgif.gif";
         # set the above save location correctly otherwise animation might not work
 
 
@@ -153,12 +154,12 @@ class MyQuantumBox:
                 #     self.maxLowerYBound = self.Modulus[i][j];
         
     def DisplayAnimation(self):
-        fig, ax = plt.subplots(); fig.set_size_inches(10,6);
+        fig, ax = plt.subplots(); fig.set_size_inches(12,8);
         ax.set_xlim(0,a); ax.set_ylim(-self.maxUpperYbound*1.1,self.maxUpperYbound*1.1);
 
-        line = ax.plot(self.xPoints,self.RealPart[0][:],color = 'k', lw=1, label = "Real Part Re(Psi)")[0];
-        ModLine = ax.plot(self.xPoints,self.Modulus[0][:],color = 'r', lw=2,label="|Psi|")[0];
-        ImLine = ax.plot(self.xPoints,self.ImaginaryPart[0][:],color = 'b', lw=1, label="Imaginary part Im(Psi)")[0];
+        line = ax.plot(self.xPoints,self.RealPart[0][:],'-.' ,color = 'orange', lw=1, label = "Real Part Re(Psi)")[0];
+        ModLine = ax.plot(self.xPoints,self.Modulus[0][:],color = 'k', lw=1,label="|Psi|")[0];
+        ImLine = ax.plot(self.xPoints,self.ImaginaryPart[0][:],'c-.', lw=1, label="Imaginary part Im(Psi)")[0];
         def animate(i):
             line.set_ydata(self.RealPart[i][:]);
             ModLine.set_ydata(self.Modulus[i][:]);
@@ -166,8 +167,6 @@ class MyQuantumBox:
         originalFunction, = ax.plot(self.xPoints,self.originalYval,'b--', label="Psi at T=0");
         ax.legend();
         anim = FuncAnimation(fig,animate, interval = self.timeDelay*1000, frames=len(self.t)-1);
-        
-        #for some reason, the r must be placed in front of the path
 
         Writer = animationFunctions.FFMpegWriter(fps=30);
         anim.save(saveLocation,writer='imagemagick');
@@ -175,15 +174,15 @@ class MyQuantumBox:
         plt.show();
 
         
-a = 4;
+a = 10;
 def f(x):
     a = 0; b = 1;
     if(a <= x <= b):
         return sqrt(2/(b-a))*sin((x-a)*pi/(b-a));
     else:
         return 0;
-def CentredAt1(x):
-    a = 0.85; b = 1.15;
+def CentredAt25(x):
+    a = 2.5; b = 3;
     if(a <= x <= b):
         return sqrt(2/(b-a))*sin((x-a)*pi/(b-a));
     else:
@@ -196,6 +195,31 @@ def sinc(x):
         return sin(pi*x)/x;
     else:
         return 0;
-box1 = MyQuantumBox(a,CentredAt1,40,32,400,10000);
-#box1.initialise(CentredAt2,20);
+def StationaryState(x):
+    stateNumber = 6;
+    return sqrt(2/a)* sin(stateNumber*pi*x/a);
+def s(x):
+    return (sin(pi*x/2)*x)/165.65; #dividing by 165.65 to normalize it
+
+def SinusoidalriseEqual(x):
+    c = 20;
+    left = a/c; right = a - a/c;
+    A = 0.32444284282346; #normalization constant
+    if(0 <= x <= left):
+        return A*sin(x*c*pi/(2*a));
+    elif(right <= x <= a):
+        return A*sin((a-x)*c*pi/(2*a));
+    return A;
+box1 = MyQuantumBox(a,SinusoidalriseEqual,20,30,150,1000); #forms a quantum 1D box of size a(a=10)
+#and places the function passed as the initial wavefunction.
+
+'''recommended values for parameters for animation are
+#Quick  - num = 50, fineness = 1000
+#Good - num = 150, fineness = 10000 
+#if Noise persisists, then increase num but it will take more time to display
+
+#note that fineness just decreases error of integration and hence no significant change for higher values than 10k
+#num is the number of terms in the series hence increasing this gives a smoother and more accurate curve
+#but in general an amount of 100 is good enough.
+#box1.initialise(CentredAt2,20); '''
 box1.DisplayAnimation();
